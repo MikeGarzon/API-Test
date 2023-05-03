@@ -47,6 +47,13 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.11</version>
         </dependency>
+        <!-- API TEST by REST ASSURED-->
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-rest-assured</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
         <!-- JUNIT 5 DEPENDENCY-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -119,7 +126,8 @@
                 <version>${serenity.version}</version>
                 <configuration>
                     <tags>${tags}</tags>
-                    <reports>single-page-html</reports>
+                    <!-- We want more detailed reports -->
+                    <!-- <reports>single-page-html</reports> -->
                 </configuration>
                 <executions>
                     <execution>
